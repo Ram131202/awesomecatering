@@ -1,0 +1,679 @@
+/* General Body Styles */
+:root {
+    --primary-color: #ff6347;
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+.container {
+    padding: 2rem 5%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* Header and Navigation Bar */
+header {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover */
+}
+
+.btn:hover {
+    background-color: #e5533d;
+    transform: translateY(-3px); /* Hover effect */
+}
+
+/* About Us Section */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1 1 300px;
+}
+
+/* Image Gallery Styles (Main.html) */
+.image-gallery-wrapper {
+    flex: 1 1 400px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    border-radius: 8px;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    max-width: 90vw;
+}
+
+.image-gallery img {
+    height: 250px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Added for hover */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+
+.image-gallery-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-gallery-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.image-gallery-wrapper::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.image-gallery-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Services Section */
+.service-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    flex-basis: 300px;
+    flex-grow: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added for hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+
+/* Menu Section (Main.html) */
+.menu-items {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    padding: 1rem;
+    min-width: 20vw;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added for hover */
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+}
+
+.menu-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Location and Map Section */
+.location-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+.address, .map-container {
+    flex: 1 1 400px;
+}
+.address {
+    font-size: 1.1rem;
+}
+.map-container {
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added for hover */
+}
+.map-container:hover {
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Added for focus */
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.2); /* Focus effect */
+    outline: none;
+}
+
+/* --- Footer Styles --- */
+footer {
+    background-color: var(--dark-color);
+    color: #ccc;
+    padding: 3rem 5%;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-column {
+    align-content: center;
+    min-width: 250px;
+}
+
+.footer-column h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Underline effect for footer headings */
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.footer-column p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--primary-color);
+}
+
+.footer-column .fas {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-media-icons a {
+    color: var(--dark-color);
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-icons a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-5px) scale(1.1); /* Enhanced hover effect */
+}
+
+.footer-thanks {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 1.5rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* --- New Animation Styles --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Specific animation variations */
+.animate-from-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-from-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-scale-in.is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Button arrow styling */
+.btn .arrow {
+    display: inline-block;
+    margin-left: 8px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid white; /* Initial color of the arrow */
+    transition: transform 0.3s ease-out; /* Animation for the arrow */
+}
+
+/* Button hover effect: move arrow to the right */
+.btn:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* --- Styles for Full Menu Page (menu.html) --- */
+.menu-page-container {
+    padding-top: 4rem; /* Adjust padding for header */
+}
+
+.menu-category {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.menu-category h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.menu-category h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.menu-item-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.menu-item-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-item-card h4 {
+    font-size: 1.4rem;
+    color: var(--dark-color);
+    margin: 1rem 0.5rem 0.5rem;
+}
+
+.menu-item-card p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item-card .price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* --- Styles for Full Gallery Page (full_gallery.html) --- */
+.gallery-page-container {
+    padding-top: 4rem; /* Adjust padding for header */
+}
+
+.full-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+
+/* ------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------ */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--dark-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        padding: 0.5rem 0;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .service-cards, .menu-items {
+        flex-direction: column;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .social-media-icons {
+        justify-content: center;
+    }
+
+    /* Menu page specific responsive adjustments */
+    .menu-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .menu-item-card {
+        margin: 0 auto; /* Center cards */
+        max-width: 350px; /* Max width for readability */
+    }
+
+    /* Gallery page specific responsive adjustments */
+    .full-gallery-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .gallery-item {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 5%;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+        bottom: 20px;
+        font-size: 24px;
+    }
+    .menu-category h3 {
+        font-size: 1.8rem;
+    }
+}
